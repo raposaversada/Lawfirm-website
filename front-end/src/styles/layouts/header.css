@@ -15,9 +15,18 @@
 
 /* Link do logo */
 #header h1 a{
+    display:flex;
+    align-items: center;
     text-decoration:none;
     color:white;
     font-weight:bold;
+    font-size: 30px;
+}
+
+/*Logo do header*/
+#header h1 img{
+    width: 70px;
+    margin-right:10px;
 }
 
 /* Lista do menu */
