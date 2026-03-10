@@ -1,0 +1,42 @@
+/* Header principal */
+#header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 60px;
+    background:#1e2a38;
+}
+
+/* Nome do escritório */
+#header h1{
+    margin:0;
+    font-size:22px;
+}
+
+/* Link do logo */
+#header h1 a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+/* Lista do menu */
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/* Links */
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+}
+
+/* efeito hover */
+.menu a:hover{
+    color:#d4af37;
+}
