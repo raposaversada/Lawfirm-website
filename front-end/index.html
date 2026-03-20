@@ -159,16 +159,61 @@
         <h2>Entre em Contato</h2>
         <p>Preencha o formulário abaixo e retornaremos o mais rápido possível.</p>
 
-        <form class="contato-form">
+        <form class="contato-form" id="form-contato">
             <input type="text" name="nome" placeholder="Nome completo" required>
             <input type="email" name="email" placeholder="E-mail" required>
             <input type="tel" name="telefone" placeholder="Telefone" required>
             <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
             <button type="submit">Enviar Mensagem</button>
+            <p id="mensagem-sucesso"></p>
         </form>
         </div>
     </div>
     </section>
-        
+   
+    <script>
+    document.getElementById("form-contato").addEventListener("submit", async function(e) {
+        e.preventDefault(); 
+
+        const formData = new FormData(this);
+
+        const data = {
+            nome: formData.get("nome"),
+            email: formData.get("email"),
+            telefone: formData.get("telefone"),
+            mensagem: formData.get("mensagem")
+        };
+
+        try {
+            const response = await fetch("http://localhost:3000/contato", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            const msg = document.getElementById("mensagem-sucesso");
+
+            msg.innerText = result.mensagem;
+
+            setTimeout(() => {
+                msg.innerText = "";
+            }, 5000);
+
+        } catch (error) {
+                const msg = document.getElementById("mensagem-sucesso");
+
+                msg.innerText = "Erro ao enviar mensagem.";
+
+                setTimeout(() => {
+                    msg.innerText = "";
+                }, 5000);
+            }
+        });
+            
+    </script>
 </body>
 </html>
