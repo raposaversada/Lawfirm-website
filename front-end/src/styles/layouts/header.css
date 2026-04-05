@@ -1,0 +1,55 @@
+/* Header principal */
+#header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    background:#1e2a38;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Nome do escritório */
+#header h1{
+    margin:0;
+    font-size:22px;
+}
+
+/* Link do logo */
+#header h1 a{
+    display:flex;
+    align-items: center;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-size: 30px;
+}
+
+/*Logo do header*/
+#header h1 img{
+    width: 70px;
+    margin-right:10px;
+}
+
+/* Lista do menu */
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/* Links */
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+}
+
+/* efeito hover */
+.menu a:hover{
+    color:#d4af37;
+}

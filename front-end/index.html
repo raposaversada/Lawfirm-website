@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afonso Melo - advocacia previdenciária </title>
+    <link rel="stylesheet" href="src/styles/layouts/header.css">
+    <link rel="stylesheet" href="src/styles/layouts/footer.css">
+    <link rel="stylesheet" href="src/styles/global.css">
+</head>
+
+
+<body>
+        <!-- Header -->
+		<header id="header" class="alt">
+			<h1>
+                <a href="index.html">
+                    <img src="src/assets/images/logo.png" alt="">
+                    Afonso Melo Advocacia
+                </a>
+            </h1>
+
+            <nav id="nav">
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">Sobre Nós</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#contato">Entre em contato conosco</a></li>
+                </ul>
+            </nav>
+		</header>
+
+        <!-- Interface inicial -->
+        <section id="home">
+        <img src="src/assets/images/banner1.png" alt="banner">
+
+
+
+        <!-- Sobre Nós    -->
+        <section id="aboutus" class="about-section">
+
+            <div class="about-text">
+                <h2>Sobre Nós</h2>
+                <p>
+                Somos um escritório de advocacia especializado em Direito Previdenciário, com mais de 15 anos de experiência. No escritório, dedicamo-nos a fornecer assessoria e representação jurídica de alta qualidade em questões relacionadas a aposentadorias, pensões e benefícios previdenciários. Nossa equipe de advogados altamente qualificados trabalha incansavelmente para garantir que nossos clientes recebam os benefícios e o tratamento justo que merecem.
+                </p>
+
+                <p>
+                Orgulhamo-nos de nossa trajetória, marcada pela dedicação, integridade e compromisso com a justiça. Entendemos que cada caso é único, por isso oferecemos soluções jurídicas personalizadas e eficazes, adaptadas às necessidades específicas de cada cliente. Nossa missão é prestar um serviço jurídico baseado na confiança, transparência e excelência profissional.
+                </p>
+
+                <p>
+                Confira nossas áreas de atuação:
+                </p>           
+            </div>
+
+            <div class="about-grid">
+
+                <div class="grid-item">
+                <img src="src/assets/images/prev.png" alt="prev">
+                <p>Direito Previdenciário</p>
+                </div>
+
+                <div class="grid-item">
+                <img src="src/assets/images/adm.png" alt="adm">
+                <p>Direito Administrativo</p>
+                </div>
+
+                <div class="grid-item">
+                <img src="src/assets/images/consumidor.png" alt="consumidor">
+                <p>Direito do Consumidor</p>
+                </div>
+
+                <div class="grid-item">
+                <img src="src/assets/images/ben.png" alt="ben">
+                <p>Benefícios Administrativos</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section id="beneficios" class="beneficios">
+
+            <p class="subtitulo">GUIA DOS BENEFÍCIOS</p>
+            <h2>Principais benefícios da Previdência:</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="linha"></div>
+                    <img src="src/assets/images/bpc.png" alt="BPC LOAS">
+
+                    <h3>BPC/LOAS</h3>
+
+                    <p>
+                    Se você é idoso ou pessoa com deficiência e não possui condições
+                    financeiras de se manter, o BPC/LOAS pode garantir um benefício mensal.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <div class="linha"></div>
+                    <img src="src/assets/images/auxilio.png" alt="Auxílios">
+
+                    <h3>Auxílios</h3>
+
+                    <p><strong>Auxílio por Incapacidade Temporária:</strong> devido a quem fica incapaz de trabalhar por mais de 15 dias.</p>
+
+                    <p><strong>Auxílio-Acidente:</strong> indenização para quem sofreu acidente e ficou com sequelas.</p>
+                </div>
+            
+
+                <div class="card">
+                    <div class="linha"></div>
+                    <img src="src/assets/images/pensao.png" alt="Pensões">
+
+                    <h3>Pensões e Benefícios</h3>
+
+                    <p><strong>Pensão por morte:</strong> paga aos dependentes do segurado.</p>
+
+                    <p><strong>Salário-maternidade:</strong> pago por 120 dias.</p>
+                </div>
+
+            </div>
+
+            <div class="card-grande">
+
+                <img src="src/assets/images/aposentadoria.png" alt="Aposentadoria">
+
+                <div class="texto">
+
+                    <div class="linha"></div>
+
+                    <h3>Aposentadorias</h3>
+
+                    <p><strong>Por Idade:</strong> concedida a quem atinge idade mínima.</p>
+
+                    <p><strong>Por Pontos:</strong> cálculo baseado no tempo de contribuição.</p>
+
+                    <p><strong>Especial:</strong> para trabalhadores expostos a agentes nocivos.</p>
+
+                    <p><strong>Por Incapacidade Permanente:</strong> antiga aposentadoria por invalidez.</p>
+
+                </div>
+
+            </div>
+        </section>
+
+    <section id="contato" class="contato-section">
+    <div class="contato-container">
+        <div class="contato-imagem">
+        <img src="src/assets/images/advogada.png" alt="Advogado em atendimento">
+        </div>
+
+        <!-- Lado direito: formulário -->
+        <div class="contato-formulario">
+        <h2>Entre em Contato</h2>
+        <p>Preencha o formulário abaixo e retornaremos o mais rápido possível.</p>
+
+        <form class="contato-form" id="form-contato">
+            <input type="text" name="nome" placeholder="Nome completo" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+            <p id="mensagem-sucesso"></p>
+        </form>
+        </div>
+    </div>
+    </section>
+   
+    <script>
+    document.getElementById("form-contato").addEventListener("submit", async function(e) {
+        e.preventDefault(); 
+
+        const formData = new FormData(this);
+
+        const data = {
+            nome: formData.get("nome"),
+            email: formData.get("email"),
+            telefone: formData.get("telefone"),
+            mensagem: formData.get("mensagem")
+        };
+
+        try {
+            const response = await fetch("http://localhost:3000/contato", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            const msg = document.getElementById("mensagem-sucesso");
+
+            msg.innerText = result.mensagem;
+
+            setTimeout(() => {
+                msg.innerText = "";
+            }, 5000);
+
+        } catch (error) {
+                const msg = document.getElementById("mensagem-sucesso");
+
+                msg.innerText = "Erro ao enviar mensagem.";
+
+                setTimeout(() => {
+                    msg.innerText = "";
+                }, 5000);
+            }
+        });
+            
+    </script>
+</body>
+</html>

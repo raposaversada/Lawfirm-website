@@ -1,0 +1,262 @@
+body {
+  padding-top: 10px
+}
+
+#home{
+  background-image: url("banner1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#home img {
+  display: block;
+  width: 100%;    
+  height: auto;
+}
+/*Para garantir que o conteúdo não fique escondido atrás do header ao clicar nos links de navegação*/
+
+#aboutus {
+  scroll-margin-top: 100px; 
+}
+#home {
+  scroll-margin-top: 100px; 
+}
+#beneficios {
+  scroll-margin-top: 100px; 
+}
+#contato {
+  scroll-margin-top: 100px; 
+}
+
+/*SOBRE NÓS*/
+
+.about-section {
+  text-align: center;
+  margin-top: 0;           
+  padding-top: 40px;       
+  background-image: url("../assets/images/fundoaboutus.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255)
+
+}
+
+.about-section h2 {
+  margin-top: 0;           
+  margin-bottom: 20px;    
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* GRID 01*/
+
+.about-grid {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  color:black;
+  width: 1000px;
+  margin: 0 auto;
+  
+}
+
+.grid-item {
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: rgb(241, 244, 249);
+  text-align: center;
+}
+
+.grid-item img {
+  width: 90%;
+  transition: transform 0.4s ease;
+  
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.grid-item p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* GRID 02*/
+.beneficios{
+  background: #710912;
+  padding: 80px 20px;
+  text-align: center;
+  color: rgb(3, 32, 50);
+}
+
+.subtitulo{
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: white
+}
+
+.beneficios h2{
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: white
+}
+
+
+  /* GRID DOS CARDS */
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.card{
+  background:#fcfcfc;
+  padding:30px;
+  border-radius:20px;
+  text-align:left;
+  position:relative;
+}
+
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+
+/* LINHA DOURADA */
+
+.linha{
+  width:60px;
+  height:6px;
+  background:#f5d27a;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+
+/* CARD GRANDE */
+
+.card-grande{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  max-width:1000px;
+  margin:60px auto 0;
+  background:#ffffff;
+  padding:30px;
+  border-radius:20px;
+}
+
+.card-grande img{
+  width:100%;
+  border-radius:15px;
+}
+
+.texto{
+  text-align:left;
+}
+
+/*CONTATO*/
+.contato-section {
+  padding: 60px 40px;
+  background: #020b3d;
+  border-top: 30px solid #710912; 
+}
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap; 
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px; 
+  align-items: center;
+}
+
+.contato-imagem {
+  flex: 1; 
+  min-width: 300px;
+}
+
+.contato-imagem img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.contato-formulario {
+  flex: 1; /* ocupa a outra metade */
+  min-width: 300px;
+  color: white
+}
+
+.contato-formulario h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contato-formulario p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* FORMULÁRIO */
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contato-form button {
+  background: #a10d1a;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contato-form button:hover {
+  background: #710912;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+  }
+}
