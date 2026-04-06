@@ -17,7 +17,7 @@ services:
       - lawfirm-network
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/health-check"]
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:3000/health-check').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
       interval: 30s
       timeout: 10s
       retries: 3
