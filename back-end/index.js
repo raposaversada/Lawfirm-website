@@ -17,6 +17,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get("/health-check", (req, res) => {
+  res.status(200).json({ status: "ok" });
+})
+
 
 app.post("/contato", async (req, res) => {
   const { nome, email, telefone, mensagem } = req.body;
