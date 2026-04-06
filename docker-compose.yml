@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./back-end
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
+    volumes:
+      - ./back-end:/app
+      - /app/node_modules
+    networks:
+      - lawfirm-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - lawfirm-network
+    restart: unless-stopped
+
+networks:
+  lawfirm-network:
+    driver: bridge
