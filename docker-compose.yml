@@ -5,19 +5,25 @@ services:
     build:
       context: ./back-end
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
     environment:
       - PORT=3000
       - NODE_ENV=production
       - EMAIL_USER=${EMAIL_USER}
       - EMAIL_PASS=${EMAIL_PASS}
-    volumes:
-      - ./back-end:/app
-      - /app/node_modules
+      - EMAIL_DESTINO=${EMAIL_DESTINO}
     networks:
       - lawfirm-network
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health-check"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
 
   frontend:
     build:
@@ -26,10 +32,16 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     networks:
       - lawfirm-network
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
 
 networks:
   lawfirm-network:
